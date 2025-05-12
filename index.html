@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMarket - Fresh from Farm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+            <nav>
+                <div class="logo">AgriMarket</div>
+                <button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#farmers">farmers</a>
+                    <a href="#todo">to do list</a>
+                </div>
+            
+            </nav>
+    
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Farm Fresh Vegetables at Your Doorstep</h2>
+            <p>Pure. Organic. Straight from our fields to your home.</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+<div class="main content">
+    
+   <!-- Products Section -->
+<section id="products" class="products-section">
+    <h2 class="section-title">Our Products</h2>
+    <button onclick="sortProductsByPrice()" class="sort-btn">Sort by Price: Low to High</button>
+    <div class="products-grid" id="products-grid">
+        <div class="product-card" data-price="2.5">
+            <img src="OIP.jpeg" alt="Tomatoes">
+            <h3>Tomatoes</h3>
+            <p>$2.5 / kg</p>
+            <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card" data-price="1.8">
+            <img src="OIP (1).jpeg" alt="Cabbage">
+            <h3>Cabbage</h3>
+            <p>$1.8 / pc</p>
+            <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card" data-price="2">
+            <img src="OIP (2).jpeg" alt="Carrots">
+            <h3>Carrots</h3>
+            <p>$2 / kg</p>
+            <button class="btn-secondary">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Tools Section -->
+<section class="products-section">
+    <h2 class="section-title">Farming Tools</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="OIP (3).jpeg" alt="Hand Shovel">
+            <h3>Hand Shovel</h3>
+            <p>$10 / piece</p>
+            <button class="btn-secondary" onclick="addToCart('Hand Shovel')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="OIP (4).jpeg" alt="Water Sprayer">
+            <h3>Water Sprayer</h3>
+            <p>$25 / unit</p>
+            <button class="btn-secondary" onclick="addToCart('Water Sprayer')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Seeds Section -->
+<section class="products-section">
+    <h2 class="section-title">Seeds</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="OIP (5).jpeg" alt="Organic Tomato Seeds">
+            <h3>Organic Tomato Seeds</h3>
+            <p>$5 / packet</p>
+            <button class="btn-secondary" onclick="addToCart('Organic Tomato Seeds')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="OIP (6).jpeg" alt="Hybrid Carrot Seeds">
+            <h3>Hybrid Carrot Seeds</h3>
+            <p>$6 / packet</p>
+            <button class="btn-secondary" onclick="addToCart('Hybrid Carrot Seeds')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Pesticides Section -->
+<section class="products-section">
+    <h2 class="section-title">Eco-friendly Pesticides</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="bd3c6bc4-9f9b-4d4c-93c7-c0bf8dbe41b0.0e3bc900f5f618176b20918eeea0c687.webp" alt="Neem Oil Spray">
+            <h3>Neem Oil Spray</h3>
+            <p>$8 / bottle</p>
+            <button class="btn-secondary" onclick="addToCart('Neem Oil Spray')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="OIP (7).jpeg" alt="Organic Fungicide">
+            <h3>Organic Fungicide</h3>
+            <p>$12 / bottle</p>
+            <button class="btn-secondary" onclick="addToCart('Organic Fungicide')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+<!-- Contact Form Section -->
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your Full Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-secondary">Send Message</button>
+    </form>
+</section>
+</div>
+    <!-- Farmers Section -->
+    <section id="farmers" class="farmers-section">
+        <h2 class="section-title">Meet Our Farmers</h2>
+        <div class="farmers-grid">
+            <div class="farmer-card">
+                <img src="OIP (8).jpeg" alt="Farmer John">
+                <h3>Farmer John</h3>
+                <p>Organic Expert from California</p>
+            </div>
+            <div class="farmer-card">
+                <img src="a9a587e9a577a5a09ee61397c0770c3c.gif" alt="Farmer Maya">
+                <h3>Farmer Maya</h3>
+                <p>Fresh Fields from Texas</p>
+            </div>
+        </div>
+    </section>
+    <section id="todo">
+        <h2 class="section-title">To-Do List</h2>
+        <div class="todo-container">
+            <!-- Add new task -->
+            <input type="text" id="todoInput" placeholder="Add a new task" />
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+    
+        <ul id="todoList">
+            <!-- List of tasks will be dynamically added here -->
+        </ul>
+    </section>
+
+  <div class="quiz-container">
+        <div id="quiz">
+            <h1>Quiz of the day</h1>
+          <h2 id="question"></h2>
+          <div id="options"></div>
+          <button id="submit">Submit</button>
+          <div id="result"></div>
+        </div>
+      </div>
+      
+      <div class="joke-box">
+        <h2>Want a Laugh?</h2>
+        <p id="setup">Click the button to load a joke.</p>
+        <p id="punchline" class="hidden"></p>
+        <button id="get-joke">Get Joke</button>
+      </div>
+
+
+      
+<!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>Contact us at: support@agrimarket.com | +1 234 567 890</p>
+            <p>&copy; 2025 AgriMarket. All Rights Reserved.</p>
+        </div>
+    </footer> 
+    <script src="script.js"></script>
+</body>
+</html>
